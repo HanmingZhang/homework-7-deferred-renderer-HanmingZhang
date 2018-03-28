@@ -84,7 +84,7 @@ function loadScene() {
   sphere = new Icosphere(vec3.fromValues(0.0, 18.0, 0.0), 1.0, 6.0);
   sphere.create();
 
-  tex0 = new Texture('../resources/textures/wahoo.bmp');
+  tex0 = new Texture('resources/textures/wahoo.bmp');
 }
 
 

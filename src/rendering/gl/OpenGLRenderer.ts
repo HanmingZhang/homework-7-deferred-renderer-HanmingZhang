@@ -148,17 +148,17 @@ class OpenGLRenderer {
     this.add32BitPass(this.post32PassesCartoon, new PostProcess(new Shader(gl.FRAGMENT_SHADER, require('../../shaders/sobeledgedetection-frag.glsl'))));
     // Kuwahara effects
     this.add32BitPass(this.post32PassesCartoon, new PostProcess(new Shader(gl.FRAGMENT_SHADER, require('../../shaders/kuwahara-frag.glsl'))));
-    this.cartoon_paper_texture = new Texture('../../../resources/textures/paper.jpg');
+    this.cartoon_paper_texture = new Texture('resources/textures/paper.jpg');
     this.post32PassesCartoon[1].setupTexUnits(["tex_Paper"]);
     // combine and add a frame
     this.add32BitPass(this.post32PassesCartoon, new PostProcess(new Shader(gl.FRAGMENT_SHADER, require('../../shaders/combineMultiAddFrameFragment-frag.glsl'))));
-    this.cartoon_frame_texture = new Texture('../../../resources/textures/frame.png');        
+    this.cartoon_frame_texture = new Texture('resources/textures/frame.png');        
     this.post32PassesCartoon[2].setupTexUnits(["tex_Frame"]);
     
     // ---------------------------------
     // Digital Rian passes
     this.add32BitPass(this.post32PassesDigitalRain, new PostProcess(new Shader(gl.FRAGMENT_SHADER, require('../../shaders/digitalrain-frag.glsl'))));
-    this.digital_rain_font_texture = new Texture('../../../resources/textures/fonts.jpg');
+    this.digital_rain_font_texture = new Texture('resources/textures/fonts.jpg');
     this.post32PassesDigitalRain[0].setupTexUnits(["tex_digitalRainFont"]);
     
 
